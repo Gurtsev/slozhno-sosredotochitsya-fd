@@ -2,4 +2,146 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--bg-color);
+  font-family: var(--font-family-main);
+  display: grid;
+  justify-content: center;
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  background-attachment: fixed;
+}
+
+.header {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  inline-size: 100%;
+  margin-block-end: 40px;
+  position: relative;
+}
+
+.decorated-zone::before {
+  content:'';
+  inline-size: 25px;
+  block-size: 25px;
+  
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.decorated-zone::after {
+  content:'';
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.decorate-element {
+  display: flex;
+  justify-content: end;
+  align-items:center;
+  padding-block-start: 15px;
+  padding-inline-end: 19px;
+  padding-block-end: 40px;
+  gap: 10px;
+  color: var(--accent-color);
+}
+
+.decorate-element::after {
+  content: '';
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  filter: blur(4px);
+  background-color: var(--accent-color);
+}
+
+.header__theme-menu {
+  display: grid;
+  justify-content: end;
+  padding-inline: 10px;
+  padding-block-end: 55px;
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11.5px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  text-align:center;
+  border: none;
+  outline: none;
+  padding-inline:13px;
+  font-family: var(--font-family-main);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--color-text);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.header__title {
+  font-family: var(--font-family-main);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 96px;
+  color: var(--color-text);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  padding-inline: 10px;
+  padding-block-end: 55px;
+}
+
+.header__subtitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  margin-inline:10px;
+  margin-block-end: 66px;
+}
+
+.subtitle-decore {
+  color: var(--bg-color);
+  background-color:var(--accent-color);
+}
+
+.main {
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  padding-inline: 10px;
+}
+
+.main__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--accent-color);
+  padding-block-end: 20px;
+  
+}
+
+.main__text {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--secion-text);
 }
