@@ -3,10 +3,16 @@
   и их переопределение под различные устройства
 */
 :root {
-  --font-family-main: "IBM Plex Mono", sans-serif;
+  --font-family-main: 'IBM Plex mono', sans-serif;
   --bg-image: url(../images/cover-image-dark.png);
-  --color-text:#db00ff;
-  --accent-color:#ff0070;
-  --bg-color:#000028;
-  --secion-text: #f1b2ce;
+  --accent-padding-page: 0.625rem;
+  --accent-line-height:18px;
+  --accent-font-size:1.125rem;
+  --accent-font-weight-text: 400;
+  --accent-font-weight-title: 700;
+  --accent-title-color: #ff0070;
+  --accent-title:#db00ff;
+  --accent-subtitle-color:#000028;
+  --accent-color-text: #f1b2ce;
+  --font-size-mobile-title:clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
