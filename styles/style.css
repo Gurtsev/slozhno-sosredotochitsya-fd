@@ -2,12 +2,6 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr min-content 1fr;
-  gap: 49px;
-  padding-block-start: var(--accent-padding-page);
-  padding-inline: var(--accent-padding-page);
   background-image: var(--bg-image);
   background-repeat: no-repeat;
   background-position: center;
@@ -19,8 +13,21 @@
 .header {
   display: grid;
   position: relative;
-  grid-template-rows: min-content 192px min-content 117px;
+  grid-template-rows: 1fr min-content 1fr;
+  min-inline-size: 375px;
+  min-block-size: 668px;
   block-size: 100vh;
+  padding-inline: 10px;
+}
+
+.header__rec {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  right: 20px;
+  top: 16px;
 }
 
 .decorated-zone::before {
@@ -29,7 +36,9 @@
   block-size: 25px;
   border-block-start: 1px solid var(--accent-title-color);
   border-inline-end: 1px solid var(--accent-title-color);
-  justify-self: self-end;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .decorated-zone::after {
@@ -38,37 +47,43 @@
   block-size: 25px;
   border-block-end: 1px solid var(--accent-title-color);
   border-inline-start: 1px solid var(--accent-title-color);
-  align-self: self-end;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
 }
 
-.decorate-element {
+
+
+.header__rec::before {
+  content: "rec";
+  text-transform: uppercase;
+  display: block;
   position: absolute;
   right: var(--accent-padding-page);
   color: var(--accent-title-color);
   font-size: var(--accent-font-size);
   line-height: 25px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  
 }
 
-.decorate-element::after {
-  content: '';
+.header__rec::after {
+  content: "";
+  display: block;
   block-size: 0.563rem;
   inline-size: 0.563rem;
   border-radius: 50%;
   background-color: var(--accent-title-color);
+  position: absolute;
   filter: blur(2px);
 }
 
 .header__theme-menu {
-  justify-self: end;
   color: var(--accent-title-color);
   line-height: var(--accent-line-height);
   font-size: var(--accent-font-size);
-  
+  block-size: min-content;
+  justify-self: end;
+  align-self: center;
 }
 
 .header__theme-menu-list {
@@ -97,7 +112,6 @@
 */
 
 .header__title {
-
 }
 
 .title-style {
@@ -120,7 +134,7 @@
 
 .main {
   display: grid;
-  gap:50px;
+  gap: 50px;
   font-size: var(--accent-font-size);
   line-height: 23.4px;
   font-family: inherit;
@@ -129,7 +143,7 @@
 .main__title {
   font-size: inherit;
   font-weight: var(--accent-font-weight-title);
-  
+
   line-height: inherit;
   color: var(--accent-title-color);
 }
@@ -142,7 +156,7 @@
 
 .main__text {
   padding-block-start: var(--accent-padding-page);
-  
+
   line-height: inherit;
   color: var(--accent-color-text);
 }
@@ -159,14 +173,13 @@ section > .main__text:not(:last-child) {
   margin-block-start: 20px;
 }
 
-.main__how > .main__subtitle:nth-child(2n+1) {
+.main__how > .main__subtitle:nth-child(2n + 1) {
   font-weight: var(--accent-font-weight-text);
 }
 
-
 .gallery {
   display: grid;
-  gap:10px;
+  gap: 10px;
   padding-block-start: 10px;
 }
 
@@ -180,5 +193,3 @@ section > .main__text:not(:last-child) {
   grid-template-rows: 1fr min-content 1fr;
   block-size: 100vh;
 }
-
-
