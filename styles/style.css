@@ -8,6 +8,8 @@
   background-size: cover;
   background-attachment: fixed;
   font-family: var(--font-family-main);
+  display: grid;
+  gap: 40px;
 }
 
 .header {
@@ -76,24 +78,49 @@
   color: var(--accent-title-color);
   line-height: var(--accent-line-height);
   font-size: var(--accent-font-size);
-  min-block-size: 98px;
-  block-size: 100%;
-  justify-self: end;
   align-self: center;
+  justify-self: end;
 }
 
 .header__theme-menu-list {
-  align-self: center;
+  display: flex;
+  min-block-size: 98px;
+  min-inline-size: 70px;
+  inline-size: 100%;
+  block-size: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
 }
 
-/*
-
-Место для стилей переключателей 
-
-*/
-
-.header__title {
+.header__theme-menu-item {
+  inline-size: 100%;
+  block-size: 100%;
+  min-inline-size: 70px;
+  min-block-size: 26px;
+  text-align: center;
 }
+
+.header__theme-menu-item > .header__theme-menu-button_active {
+  border: 1px solid var(--accent-title-color, #ff0070);
+}
+
+
+.header__theme-menu-button {
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: transparent;
+  border: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--accent-title, #db00ff);
+}
+
 
 .title-style {
   font-size: var(--font-size-mobile-title);
@@ -104,8 +131,9 @@
 
 .header__subtitle {
   font-size: var(--accent-font-size);
-  line-height: 1.463rem;
+  line-height: 130%;
   font-weight: var(--accent-font-weight-title);
+  align-content: center;
 }
 
 .title-decor {
@@ -119,6 +147,7 @@
   font-size: var(--accent-font-size);
   line-height: 23.4px;
   font-family: inherit;
+  padding-inline: 10px;
 }
 
 .main__title {
@@ -133,10 +162,11 @@
   font-size: inherit;
   line-height: inherit;
   font-weight: var(--accent-font-weight-title);
+
 }
 
 .main__text {
-  padding-block-start: var(--accent-padding-page);
+  padding-block-start: 10px;
 
   line-height: inherit;
   color: var(--accent-color-text);
@@ -146,16 +176,18 @@
   padding-top: 20px;
 }
 
-section > .main__text:not(:last-child) {
-  padding-block-end: 1.25rem;
+.decore-link {
+  display: inline-block;
+  text-shadow: 2px 2px 0 var(--accent-title-color);
+  text-decoration: none;
 }
 
-.main__how > .main__subtitle + .main__subtitle {
+.decore-link:hover {
+  border-block-end: 1px solid var(--accent-color-text, #f1b2ce);
+}
+
+.main__how > .main__subtitle {
   margin-block-start: 20px;
-}
-
-.main__how > .main__subtitle:nth-child(2n + 1) {
-  font-weight: var(--accent-font-weight-text);
 }
 
 .gallery {
@@ -169,8 +201,12 @@ section > .main__text:not(:last-child) {
 }
 
 .footer {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr min-content 1fr;
+  align-content: center;
+  justify-content: center;
+  min-block-size: 668px;
+  min-inline-size: 375px;
   block-size: 100vh;
+  position: relative;
+  padding-inline: 10px;
 }
+
