@@ -5,7 +5,7 @@
 :root {
   --font-family-main: 'IBM Plex mono', sans-serif;
   --bg-image: url(../images/cover-image-dark.png);
-  --accent-padding-page: 0.625rem;
+  --padding-inline: 0.625rem;
   --accent-line-height:18px;
   --accent-font-size:1.125rem;
   --accent-font-weight-text: 400;
