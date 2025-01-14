@@ -6,14 +6,14 @@
   --font-family-main: 'IBM Plex mono', sans-serif;
   --bg-image: url(../images/cover-image-dark.png);
   --padding-inline: 10px;
-  --accent-line-height:18px;
-  --accent-font-size:1.125rem;
+  --font-size-article-text:18px;
   --accent-font-weight-text: 400;
   --accent-font-weight-title: 700;
   --accent-title-color: #ff0070;
   --accent-title:#db00ff;
   --accent-subtitle-color:#000028;
   --accent-color-text: #f1b2ce;
+  --accent-font-size:clamp(1rem, 0.9278rem + 0.3082vw, 1.125rem);
   --font-size-title:clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
 
