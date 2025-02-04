@@ -3,19 +3,22 @@
   и их переопределение под различные устройства
 */
 :root {
-  --font-family-main: 'IBM Plex mono', sans-serif;
+  --font-family-main: "IBM Plex mono", sans-serif;
   --bg-image: url(../images/cover-image-dark.png);
   --padding-inline: 10px;
-  --font-size-article-text:18px;
+  --font-size-article-text: 18px;
   --accent-font-weight-text: 400;
   --accent-font-weight-title: 700;
-  --accent-title-color: #ff0070;
-  --accent-title:#db00ff;
-  --accent-subtitle-color:#000028;
-  --accent-color-text: #f1b2ce;
-  --font-size-title:clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-}
 
+  --accent-color:#ff0070;
+  --title-color: #db00ff;
+  --subtitle-color: #000028;
+  --text-color: #f1b2ce;
+  --title-shadow: var(--accent-color);
+  --subtitle-background-color: var(--accent-color);
+
+  --font-size-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+}
 
 @media (width >= 768px) {
   :root {
@@ -24,9 +27,17 @@
   }
 }
 
+/* dark__theme
+--accent-color: #ff0070;  (Рамки, рек с точкой, тень тайтла, меню выбора фона, фон сабтайтла, сабтатйтл- секции цвет текста, тень-слова ссылки в тексте  
+--title-color: #db00ff; цвет тайтла
+--subtitle-background-color: var(--accent-color) фон сабайтла
+--subtitle-color: #000028; цвет текса сабтайтла статьи
+--text-color: #f1b2ce; цвет текста статьи
 
-@media (width >= 1024px) {
-  :root {
-    
-  }
-}
+*/
+
+/* light__theme
+  --accent-color: #353430;
+  --title-color: #ffc2e6;
+  --subtitle-background-color: #ff8dcb;
+*/
