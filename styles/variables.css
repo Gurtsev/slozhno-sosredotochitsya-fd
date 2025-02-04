@@ -9,14 +9,13 @@
   --font-size-article-text: 18px;
   --accent-font-weight-text: 400;
   --accent-font-weight-title: 700;
-
-  --accent-color:#ff0070;
+  --accent-color: #ff0070;
   --title-color: #db00ff;
   --subtitle-color: #000028;
   --text-color: #f1b2ce;
+  --menu-button-hover: rgba(255, 0, 112, 0.4);
   --title-shadow: var(--accent-color);
   --subtitle-background-color: var(--accent-color);
-
   --font-size-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
 
@@ -26,18 +25,3 @@
     --font-size-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
-
-/* dark__theme
---accent-color: #ff0070;  (Рамки, рек с точкой, тень тайтла, меню выбора фона, фон сабтайтла, сабтатйтл- секции цвет текста, тень-слова ссылки в тексте  
---title-color: #db00ff; цвет тайтла
---subtitle-background-color: var(--accent-color) фон сабайтла
---subtitle-color: #000028; цвет текса сабтайтла статьи
---text-color: #f1b2ce; цвет текста статьи
-
-*/
-
-/* light__theme
-  --accent-color: #353430;
-  --title-color: #ffc2e6;
-  --subtitle-background-color: #ff8dcb;
-*/

@@ -13,8 +13,10 @@
   --accent-color: #353430;
   --title-color: #ffc2e6;
   --subtitle-background-color: #ff8dcb;
+  --subtitle-color: var(--accent-color);
+  --menu-button-hover: rgba(50, 49, 45, 0.4);
   --text-color: var(--accent-color);
-  --title-shadow:var(--subtitle-background-color);
+  --title-shadow: var(--subtitle-background-color);
 }
 
 .theme-light .page {
@@ -25,4 +27,3 @@
 .theme-light .header__rec {
   display: none;
 }
-
