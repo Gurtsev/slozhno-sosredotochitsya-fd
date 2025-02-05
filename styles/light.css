@@ -10,6 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-image: url(../images/cover-image-light.png);
+  --bg-color: #fff1f7;
   --accent-color: #353430;
   --title-color: #ffc2e6;
   --subtitle-background-color: #ff8dcb;
@@ -26,4 +27,26 @@
 
 .theme-light .header__rec {
   display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-image: url(../images/cover-image-light.png);
+    --bg-color: #fff1f7;
+    --accent-color: #353430;
+    --title-color: #ffc2e6;
+    --subtitle-background-color: #ff8dcb;
+    --subtitle-color: var(--accent-color);
+    --menu-button-hover: rgba(50, 49, 45, 0.4);
+    --text-color: var(--accent-color);
+    --title-shadow: var(--subtitle-background-color);
+  }
+
+  .page {
+    background-image: var(--bg-image);
+  }
+
+  .header__rec {
+    display: none;
+  }
 }

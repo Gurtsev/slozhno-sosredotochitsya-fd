@@ -3,15 +3,16 @@
   и их переопределение под различные устройства
 */
 :root {
-  --font-family-main: "IBM Plex mono", sans-serif;
+  --font-family-main: "IBM Plex mono", monospace;
   --bg-image: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
   --padding-inline: 10px;
   --font-size-article-text: 18px;
   --accent-font-weight-text: 400;
   --accent-font-weight-title: 700;
   --accent-color: #ff0070;
   --title-color: #db00ff;
-  --subtitle-color: #000028;
+  --subtitle-color: var(--bg-color);
   --text-color: #f1b2ce;
   --menu-button-hover: rgba(255, 0, 112, 0.4);
   --title-shadow: var(--accent-color);
@@ -25,3 +26,4 @@
     --font-size-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
+

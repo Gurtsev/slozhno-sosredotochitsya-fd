@@ -9,8 +9,20 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
+  --accent-color: #ff0070;
+  --title-color: #db00ff;
+  --subtitle-color: var(--bg-color);
+  --text-color: #f1b2ce;
+  --menu-button-hover: rgba(255, 0, 112, 0.4);
+  --title-shadow: var(--accent-color);
+  --subtitle-background-color: var(--accent-color);
 }
 
 .theme-dark .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
+  .header__rec {
+    display: flex;
+  }
 }
