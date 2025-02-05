@@ -125,6 +125,7 @@
 
 .header__theme-menu-button:focus-visible {
   border-block-end: 1px solid var(--accent-color);
+  
 }
 
 .title-style {
@@ -285,7 +286,7 @@
   .main__how {
     grid-template-columns: 1fr 2fr;
   }
-  
+
   .main__gallery {
     gap: 20px;
   }
