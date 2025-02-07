@@ -199,7 +199,7 @@
 .main__what-articles {
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .decore-link {
@@ -290,6 +290,10 @@
     grid-template-columns: 1fr 2fr;
   }
 
+  .main__what-articles {
+    flex-direction: column;
+  }
+
   .main__what .main__what-articles {
     grid-column: 1/-1;
   }
@@ -373,10 +377,9 @@
     flex-direction: row;
     gap: 20px;
     margin-block-start: 10px;
-    flex-wrap: wrap;
   }
 
   .main__what-articles .article-container {
-    max-inline-size: 315px;
+    max-inline-size: 314px;
   }
 }
